@@ -11,33 +11,35 @@ public class SkillBuff : MonoBehaviour
 
     InputAction interactAction;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         interactAction = InputSystem.actions.FindAction("Interact");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (interactAction.IsPressed())
-        {
-            GetBuff();
-        }
+        //if (interactAction.IsPressed())
+        //{
+            //GetBuff();
+        //}
     }
 
-    private void GetBuff()
+    private void OnTriggerStay()
     {
-        if (!isBuffed)
+        if (interactAction.WasPressedThisFrame())
         {
-            isBuffed = true;
-        }
-        else
-        {
-            isBuffed = false;
-        }
+            if (!isBuffed)
+            {
+                isBuffed = true;
+            }
+            else
+            {
+                isBuffed = false;
+            }
 
-        BuffText.text = "Buffed? " + isBuffed;
+            BuffText.text = "Buffed? " + isBuffed;
+        }
+        
     }
 
 }

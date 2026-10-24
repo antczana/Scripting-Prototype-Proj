@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         Vector2 direction = new Vector2(moveValue.x * Time.deltaTime, moveValue.y * Time.deltaTime);
         controller.Move(direction * speed);
+        Bounds();
 
         //if (interactAction.IsPressed())
         //{
@@ -81,6 +82,21 @@ public class Player : MonoBehaviour
     public void Normalize()
     {
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
+    }
+
+    private void Bounds()
+    {
+        //left bound
+        if (transform.position.x < -10.89f)
+        {
+            transform.position = new Vector3(-10.89f, transform.position.y, -1.0372f);
+        }
+
+        //right bound
+        else if (transform.position.x > -2.17f)
+        {
+            transform.position = new Vector3(-2.17f, transform.position.y, -1.0372f);
+        }
     }
 
 }
