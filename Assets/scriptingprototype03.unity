@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 1002906300}
   - component: {fileID: 1002906299}
   - component: {fileID: 1002906302}
+  - component: {fileID: 1002906303}
   m_Layer: 0
   m_Name: DiceRoll
   m_TagString: Untagged
@@ -422,7 +423,21 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 3.3}
-  m_Center: {x: 0, y: -0.5, z: 0}
+  m_Center: {x: 0, y: -0.5, z: -1.27}
+--- !u!114 &1002906303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002906295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc514ab9e7c76647b1ccfb0a4e93af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiceRoll
+  RollResults: {fileID: 2043543305}
+  isBuffed: {fileID: 1385892804}
 --- !u!1 &1132951862
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,8 +473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9c8b7e5a5d6f646a26f9f0105d0c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  BuffText: {fileID: 2091099022}
-  RollResults: {fileID: 2043543305}
 --- !u!136 &1132951864
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -881,6 +894,8 @@ GameObject:
   - component: {fileID: 1385892802}
   - component: {fileID: 1385892801}
   - component: {fileID: 1385892800}
+  - component: {fileID: 1385892803}
+  - component: {fileID: 1385892804}
   m_Layer: 0
   m_Name: SkillBuff
   m_TagString: Untagged
@@ -960,6 +975,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1385892803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385892796}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 3, z: 3.3}
+  m_Center: {x: 0, y: 0, z: -1.27}
+--- !u!114 &1385892804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385892796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c47f5e9bf5290045b123fb16140cc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillBuff
+  isBuffed: 0
+  BuffText: {fileID: 2091099022}
 --- !u!1 &1408232358
 GameObject:
   m_ObjectHideFlags: 0
