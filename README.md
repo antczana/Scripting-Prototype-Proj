@@ -7,6 +7,8 @@ ENGINEER'S JOURNAL: My main technical hurdle was figuring out how to use the Inp
 
 AILOG: No AI was used at any point in the development of this code.
 
+OTHER ISSUES: Canvas Studio refused to work properly when I tried to screen record for the deliverable. I was able to download the software and get it running, but when I tried to set up the screen recording and went to the "preferences" button on the bottom of the screen, it closed. Any time I tried to use Canvas Studio to screen record from then on out failed. I would be prompted to download the software, and even when I had it downloaded (or redownloaded it) it prompted me to download it again. Not sure what happened there.
+
 (9/27/26) - First README:
 MECHANIC: My mechanic revolved around rolling two dice (random number generators). There was also a way to add a skill that increased the score you got.
 
