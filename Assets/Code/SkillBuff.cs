@@ -6,7 +6,6 @@ using TMPro;
 public class SkillBuff : MonoBehaviour
 {
     public bool isBuffed = false;
-    private float Buff = 2.0f;
     public TMP_Text BuffText = null;
 
     InputAction interactAction;

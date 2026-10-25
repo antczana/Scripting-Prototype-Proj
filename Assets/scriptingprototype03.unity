@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiceRoll
   RollResults: {fileID: 2043543305}
+  ib: 0
 --- !u!1 &1132951862
 GameObject:
   m_ObjectHideFlags: 0
